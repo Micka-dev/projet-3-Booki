@@ -1,11 +1,13 @@
 /****** General ***********/
 * {
     font-family: 'Raleway', sans-serif;
+    margin:0;
 }
 
 :root {
     --main-color: #0065FC;
-    --main-bg-color: #F2F2F2;
+    /* --main-bg-color: #F2F2F2; */
+    --main-bg-color: #19171717;
     --filter-bg-color: #DEEBFF;
 }
 
@@ -21,8 +23,12 @@ body {
 .main-container {
     width: 100%;
     max-width: 1440px;
-    padding: 0 50px;
+    min-width: 320px;
+   
     box-sizing: border-box;
+}
+.main-container2{
+    padding: 0 50px;
 }
 
 a {
@@ -56,6 +62,90 @@ a {
 
 .neutral-star {
     color: var(--main-bg-color)
+}
+
+/**** Header *****/
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom:30px;
+}
+
+
+.fa-location-dot {
+    color:black;
+}
+
+.loupe {
+    background-color: var(--main-color);
+}
+
+
+.logo {
+    margin: 30px 50px;
+    width:61.1px;
+    height: 19px;
+}
+
+.navigation-link{
+    margin: 20px 50px 0px 50px;
+}
+
+.activities-header {
+    margin-left: 68px;
+}
+.activities-header:hover {
+    border-top: solid 2px var(--main-color);
+    padding-top: 18px;
+}
+.active {
+    border-top: solid 2px var(--main-color);
+    padding-top: 18px;
+}
+
+/* *** section research-information *** */
+.research-information{
+    margin-bottom: 35px;
+}
+
+.research-information-title {
+    margin-bottom: 8px;
+}
+
+.research-information-subtitle{
+    margin-bottom: 35px;
+}
+
+.search-bar {
+    margin-bottom: 35px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.fa-location-dot {
+    /* background-color: var(--main-bg-color); */
+    background-color:var(--main-bg-color);
+    padding: 13px 19px 16px 19px;
+    border-radius: 15px 0 0 15px;
+}
+
+.text-entry {
+    padding: 14px 24px;
+    border: 1px solid var(--main-bg-color);
+    background-color: white;
+}
+
+.submit-button {
+    padding: 14px 15px;
+    background-color: var(--main-color);
+    border: 1px solid var(--main-color);
+    border-radius: 0px 15px 15px 0px;
+    color: white;
+}
+
+.filter-bar {
+    margin-bottom: 35px;
 }
 
 /****** Hebergements And Populaires ***********/
@@ -129,6 +219,8 @@ a {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+
+    
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -137,6 +229,7 @@ a {
         width: 100%;
     }
 
+    /* ******popular-section ******/
     .populaires {
         width: 100%;
         margin-top: 50px;
@@ -163,5 +256,55 @@ a {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
-    /* ... */
+    /****** header ******/
+    header {
+        flex-direction: column;
+    }
+
+    .logo-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .logo {
+        margin: 30px 30px;
+    }
+
+    .navigation-link{
+        display: flex;
+        margin: 0;
+        text-align: center;
+    }
+
+    .hebergement-header{
+        width:50%;
+    }
+    
+    .activities-header{
+        width:50%;
+    }
+
+    .activities-header {
+        margin-left: 0;
+    }
+
+    .activities-header:hover {
+        border-top: none;
+        border-bottom: solid 2px var(--main-color);
+        padding-top: 0;
+        padding-bottom: 15px;
+    }
+    
+    .active {
+        border-top: none;
+        border-bottom: solid 2px var(--main-color);
+        padding-top: 0;
+        padding-bottom: 15px;
+    }
+    
+    .no-active {
+        border-bottom: solid 2px var(--filter-bg-col);
+        padding-bottom: 15px;
+    }
+    
 }
