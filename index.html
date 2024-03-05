@@ -21,40 +21,53 @@
                 <img class="logo" src="images\logo\Booki.png" alt="logo du site de Booki" />
             </div>
             <div class="navigation-link">
-                <a class="hebergement-header active" href="#housing-rental">Hébergements</a>
-                <a class="activities-header no-active" href="#activities">Activités</a>
+                <a class="hebergement-header" href="#housing-rental">Hébergements</a>
+                <a class="activities-header" href="#activities">Activités</a>
             </div>
         </header>
-        <div class="main-container2">
+        <div class="canister">
             <main>
                 <section class="research-information">
                     <h1 class="research-information-title">Trouvez votre hébergement pour des vacances de rêve</h1>
-                    <h4 class="research-information-subtitle">En plein centre-ville ou en pleine nature</h4>
+                    <p class="research-information-subtitle">En plein centre-ville ou en pleine nature</h4>
                     <div class="search-bar">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <input class="text-entry" type="text" name="localisation" id="localisation" value="Marseille, France"></form>
+                        <i class="fa-solid fa-location-dot fa-lg"></i>
+                        <form method="get" action="">
+                            <input class="text-entry" type="text" name="localisation" id="localisation"
+                                placeholder="Marseille, France">
+                        </form>
                         <input class="submit-button" type="submit" value="Rechercher">
+                        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
                     </div>
                     <div class="filter-bar">
-                        <h2>Filtres</h2>
-                        <div>
-                            <div></div>
-                            <div></div>
+                        <p class="filter-bar-title">Filtres</p>
+                        <div class="filter-button-bar">
+                            <button class="filter-button" type="button">
+                                <i class="fa-solid fa-money-bill-wave fa-lg"></i>
+                                <p>Économique</p>
+                            </button>
+                            <button class="filter-button" type="button">
+                                <i class="fa-solid fa-person fa-lg"></i>
+                                <p>Familial</p>
+                            </button>
+                            <button class="filter-button" type="button">
+                                <i class="fa-solid fa-heart fa-lg"></i>
+                                <p>Romantique</p>
+                            </button>
+                            <button class="filter-button" type="button">
+                                <i class="fa-solid fa-fire fa-lg"></i>
+                                <p>Nos pépites</p>
+                            </button>
                         </div>
-
+                    </div>
+                    <div class="information-point">
+                        <i class="fa-solid fa-info fa-lg"></i>
+                            <p class="information-point-text">Plus de 500 logements sont disponibles dans cette ville</p>
                     </div>
                 </section>
                 <div class="hebergements-and-populaires">
                     <section class="hebergements" id="housing-rental">
-                        <h1>Hébergements à Marseille</h1>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <i class="fa-solid fa-money-bill-wave"></i>
-                        <i class="fa-solid fa-person"></i>
-                        <i class="fa-solid fa-heart"></i>
-                        <i class="fa-solid fa-fire"></i>
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <img src="icon-info.svg" alt="icône information">
-                        <img class="loupe" src="icon-loupe.svg" alt="icône loupe">
+                        <h2>Hébergements à Marseille</h2>
 
                     </section>
                     <section class="populaires">
