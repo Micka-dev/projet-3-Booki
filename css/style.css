@@ -10,11 +10,9 @@
 
   --main-color: #0065fc;
   /* --main-bg-color: #F2F2F2; */
-  --main-bg-color: rgb(120, 113, 113);
-  /* --filter-hover-color: #DEEBFF; */
-  --filter-hover-color: rgb(137, 211, 243);
-  /* --filter-color:#D9D9D9;  */
-  --filter-color: rgb(190, 188, 188);
+  --main-bg-color: rgb(245, 151, 151);
+  --filter-hover-color: #DEEBFF;
+  --filter-color:#D9D9D9; 
   --black: black;
   --white: white;
 
@@ -269,7 +267,7 @@ header {
 
 .fa-info {
     border: 1px solid var(--filter-color);
-    padding: 17px 15px;
+    padding: 15px 13px;
     border-radius: 50%;
 }
 
@@ -279,48 +277,106 @@ header {
     margin-left: 10px;
 }
 
-/****** Hebergements And Populaires ***********/
-.hebergements-and-populaires {
+/****** housing-rental And popular ***********/
+.housing-rental-and-popular {
   display: flex;
   justify-content: space-between;
 }
 
-.hebergements-and-populaires section {
-  background-color: var(--main-bg-color);
-  border-radius: 20px;
-  padding: 30px;
+.housing-rental-and-popular section {
+    border-radius: 20px;
+    /* background-color: var(--main-bg-color);
+  padding: 30px; */
   box-sizing: border-box;
 }
 
-/****** Hebergements ***********/
-.hebergements {
+/****** housing-rental section ***********/
+.housing-rental {
   width: 65%;
+  background-color: var(--main-bg-color);
+  padding: 30px;
+
 }
 
-/****** Populaires ***********/
-.populaires {
+/* .housing-rental-cards {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 30px;
+    margin-bottom: 30px;
+    justify-content: space-between;
+}
+.housing-rental-cards a {
+    width: 28.74%;
+} */
+
+.housing-rental-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));    
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+.housing-rental-cards img {
+    width: 100%;
+    height: 124px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-bottom: 4px;
+}
+
+.housing-rental-cards .card-content {
+    width: 100%;
+    padding:0 15px 15px 15px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.housing-rental-title {
+    margin-bottom: 30px;
+}
+
+.card-title,
+.card-subtitle {
+    margin-bottom: 8px;
+}
+
+.watch-more {
+    font-size: 1.125rem;
+    line-height: 1.313rem;
+    font-weight: 700;
+}
+
+/****** popular ***********/
+.popular {
   width: 32%;
+  background-color: var(--main-bg-color);
+  padding: 30px;
+
 }
 
-.populaires-title {
+.popular-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.populaires-cards .card {
+.popular-cards .card {
   display: flex;
   margin-top: 33px;
 }
 
-.populaires-cards img {
+.popular-cards img {
   width: 33%;
   height: 136px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
 
-.populaires-cards .card-content {
+.popular-cards .card-content {
   width: 67%;
   padding-left: 15px;
   display: flex;
@@ -329,16 +385,16 @@ header {
   box-sizing: border-box;
 }
 
-.populaires-cards .card-title {
+.popular-cards .card-title {
   margin-top: 10px;
   margin-bottom: 4px;
 }
 
-.populaires-cards .card-subtitle {
+.popular-cards .card-subtitle {
   margin: 0;
 }
 
-.populaires-cards .card-rating {
+.popular-cards .card-rating {
   margin-bottom: 5px;
 }
 
@@ -368,41 +424,56 @@ header {
   }
 
 
-/*** hebergements-and-populaires section ****/
-  .hebergements-and-populaires {
+/*** housing-rental-and-popular section ****/
+  .housing-rental-and-popular {
     flex-direction: column;
   }
-
-  .hebergements {
+  /**** hebergement ****/
+  .housing-rental {
     width: 100%;
   }
 
   /* ******popular-section ******/
-  .populaires {
+  .popular {
     width: 100%;
     margin-top: 50px;
   }
+.popular-cards .card {
+  display: flex;
+  margin-top: 33px;
+}
 
-  .populaires-cards {
+  .popular-cards {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
 
-  .populaires-cards a {
+  .popular-cards a {
     width: 30%;
   }
 
-  .populaires-cards .card-title {
+  .popular-cards .card {
+        margin-top: 0px;
+  }
+
+  .popular-title {
+    margin-bottom: 20px;
+  }
+  
+
+  /* Ils ont changé la police de la maquette => pourquoi? un peu simple de faire comme ça, non ? ;)
+
+  .popular-cards .card-title {
     font-size: 14px;
   }
 
-  .populaires-cards .card-subtitle {
+  .popular-cards .card-subtitle {
     font-size: 13px;
-  }
+  } */
 }
 
-/* Small devices (phones, less than 768px) */
+/************ Small devices (phones, less than 768px) **************/
 @media (max-width: 768px) {
   /****** header ******/
   header {
@@ -457,6 +528,7 @@ header {
   .text-entry {
     padding: 14px 24px 14px 24px;
     border-right: none;
+    width: 80%;
   }
 
   .submit-button {
@@ -475,15 +547,11 @@ header {
     border: 1px solid var(--main-color);
     color: white;
     display: flex;
-    position: relative;
-    right: 15px;
+    /* position: relative;
+    right: 13px; */
+    margin-left: -15px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
-
-  /* .filter-button-bar {
-    flex-wrap: wrap;
-    row-gap: 20px;
-  } */
 
   .filter-button {
     font-size: 0.875rem;
@@ -494,9 +562,53 @@ header {
   }
 
 
+  /********* housing-rental-and-popular section **********/
+.housing-rental-and-popular {
+    gap: 15px;
 }
+  /**** housing-rental section ****/
+.housing-rental {
+    background-color: var(--white);
+    padding: 20px 20px;
+}
+  .housing-rental-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .housing-rental-cards a {
+    width: 100%;
+}
+
+  
+  /**** popular */
+.popular {
+    order: -1;
+    margin-top: 30px;
+    padding: 30px 20px;
+}
+
+  .popular-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .popular-cards a {
+    width: 100%;
+  }
+
+
+
+
+}
+
+
+/* Il n'est pas possible de rajouter un breackpoint d'après les spécifications techniques du projet
+
 @media (max-width: 390px) {
   .text-entry {
     width: 78.5%;
-  }
-}
+  } */
+
