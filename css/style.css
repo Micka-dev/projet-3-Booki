@@ -2,17 +2,18 @@
 * {
   font-family: "Raleway", sans-serif;
   margin: 0;
+  padding: 0;
 }
+
 /*** design system ***/
 
 :root {
   /* colors */
 
   --main-color: #0065fc;
-  /* --main-bg-color: #F2F2F2; */
-  --main-bg-color: rgb(245, 151, 151);
-  --filter-hover-color: #DEEBFF;
-  --filter-color:#D9D9D9; 
+  --main-bg-color: #F2F2F2;
+  --filter-hover-color: #deebff;
+  --filter-color: #d9d9d9;
   --black: black;
   --white: white;
 
@@ -97,11 +98,6 @@ a {
   text-decoration: none;
 }
 
-.section-title {
-  margin: 0;
-  font-size: 22px;
-}
-
 .card {
   background-color: white;
   border-radius: 20px;
@@ -111,10 +107,6 @@ a {
 
 .card img {
   object-fit: cover;
-}
-
-.card-title {
-  font-size: 16px;
 }
 
 .euro {
@@ -178,6 +170,10 @@ header {
 .search-bar {
   margin-bottom: 35px;
   display: flex;
+  justify-content: flex-start; 
+}
+form {
+  display: flex;
   justify-content: flex-start;
 }
 
@@ -214,9 +210,11 @@ header {
   color: white;
   font-size: 1.125rem;
   line-height: 1.313rem;
+  cursor: pointer;
 }
 
 .fa-magnifying-glass {
+  cursor: pointer;
   display: none;
 }
 
@@ -239,8 +237,8 @@ header {
 
 .filter-button {
   border: 2px solid var(--filter-color);
+  background-color: var(--white);
   border-radius: 25px;
-  display: flex;
   padding: 4px 19px;
   height: 50px;
   display: flex;
@@ -249,6 +247,7 @@ header {
   line-height: 1.25rem;
   font-weight: 700;
   margin-right: 15px;
+  cursor: pointer;
 }
 
 .filter-button .fa-solid {
@@ -260,33 +259,31 @@ header {
 }
 
 .information-point {
-    display: flex;
-    align-items: center;
-
+  display: flex;
+  align-items: center;
 }
 
 .fa-info {
-    border: 1px solid var(--filter-color);
-    padding: 15px 13px;
-    border-radius: 50%;
+  border: 1px solid var(--filter-color);
+  padding: 10.5px 7.8px 11.2px 8.2px;
+  border-radius: 50%;
 }
 
 .information-point-text {
-    font-size: 1rem;
-    line-height: 1.188rem;
-    margin-left: 10px;
+  font-size: 1rem;
+  line-height: 1.188rem;
+  margin-left: 10px;
 }
 
 /****** housing-rental And popular ***********/
 .housing-rental-and-popular {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 35px;
 }
 
 .housing-rental-and-popular section {
-    border-radius: 20px;
-    /* background-color: var(--main-bg-color);
-  padding: 30px; */
+  border-radius: 20px;
   box-sizing: border-box;
 }
 
@@ -295,59 +292,57 @@ header {
   width: 65%;
   background-color: var(--main-bg-color);
   padding: 30px;
+}
 
+.housing-rental-cards {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 30px;
+  margin-bottom: 30px;
+  justify-content: space-between;
+}
+.housing-rental-cards a {
+  width: 30%;
+}
+
+.housing-rental-cards .card {
+  height: 90%;
 }
 
 /* .housing-rental-cards {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 30px;
-    column-gap: 30px;
-    margin-bottom: 30px;
-    justify-content: space-between;
-}
-.housing-rental-cards a {
-    width: 28.74%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
 } */
 
-.housing-rental-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));    
-    gap: 30px;
-    margin-bottom: 30px;
-}
-
-
-
 .housing-rental-cards img {
-    width: 100%;
-    height: 124px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    margin-bottom: 4px;
+  width: 100%;
+  height: 124px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin-bottom: 4px;
 }
 
 .housing-rental-cards .card-content {
-    width: 100%;
-    padding:0 15px 15px 15px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px 15px 15px;
+  box-sizing: border-box;
 }
 
 .housing-rental-title {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .card-title,
 .card-subtitle {
-    margin-bottom: 8px;
+  margin-bottom: 8px;
 }
 
 .watch-more {
-    font-size: 1.125rem;
-    line-height: 1.313rem;
-    font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 1.313rem;
+  font-weight: 700;
 }
 
 /****** popular ***********/
@@ -355,7 +350,6 @@ header {
   width: 32%;
   background-color: var(--main-bg-color);
   padding: 30px;
-
 }
 
 .popular-title {
@@ -398,6 +392,68 @@ header {
   margin-bottom: 5px;
 }
 
+/****** activities section ******/
+.activities {
+  background-color: var(--white);
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.activities-title {
+  margin-bottom: 30px;
+}
+
+.activities-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.activities-cards a {
+  width: 22%;
+}
+
+.activities-cards .card {
+  padding: 0;
+  height: 100%;
+}
+
+.activities-cards img {
+  width: 100%;
+  height: 380px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.activities-cards .card-content {
+  padding: 20px 19px;
+}
+
+/******* footer section  ********/
+.footer-container {
+  display: flex;
+  background-color: var(--main-bg-color);
+
+}
+
+.footer-canister {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 33.33%;
+}
+
+.footer-title {
+  margin-bottom: 15px;
+  font-size: 1.125rem;
+  line-height: 1.313rem;
+}
+
+footer a {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.188rem;
+}
+
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
@@ -423,8 +479,7 @@ header {
     row-gap: 20px;
   }
 
-
-/*** housing-rental-and-popular section ****/
+  /*** housing-rental-and-popular section ****/
   .housing-rental-and-popular {
     flex-direction: column;
   }
@@ -438,10 +493,10 @@ header {
     width: 100%;
     margin-top: 50px;
   }
-.popular-cards .card {
-  display: flex;
-  margin-top: 33px;
-}
+  .popular-cards .card {
+    display: flex;
+    margin-top: 33px;
+  }
 
   .popular-cards {
     display: flex;
@@ -454,13 +509,12 @@ header {
   }
 
   .popular-cards .card {
-        margin-top: 0px;
+    margin-top: 0px;
   }
 
   .popular-title {
     margin-bottom: 20px;
   }
-  
 
   /* Ils ont changé la police de la maquette => pourquoi? un peu simple de faire comme ça, non ? ;)
 
@@ -471,6 +525,16 @@ header {
   .popular-cards .card-subtitle {
     font-size: 13px;
   } */
+
+  /******  activities section  ******/
+  .activities-cards img {
+    height: 200px;
+  }
+
+  /******* footer section *******/
+  .footer-canister {
+    column-gap: 30px;
+  }
 }
 
 /************ Small devices (phones, less than 768px) **************/
@@ -546,9 +610,6 @@ header {
     border-radius: 15px;
     border: 1px solid var(--main-color);
     color: white;
-    display: flex;
-    /* position: relative;
-    right: 13px; */
     margin-left: -15px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
@@ -558,19 +619,21 @@ header {
     line-height: 1rem;
     margin-right: 10px;
     width: 162.5px;
-    /* flex: 1 0 0; */
   }
 
-
   /********* housing-rental-and-popular section **********/
-.housing-rental-and-popular {
+  .housing-rental-and-popular {
     gap: 15px;
-}
+  }
+
+  .housing-rental-and-popular section {
+    border-radius: 0;
+  }
   /**** housing-rental section ****/
-.housing-rental {
+  .housing-rental {
     background-color: var(--white);
     padding: 20px 20px;
-}
+  }
   .housing-rental-cards {
     flex-direction: column;
     gap: 15px;
@@ -578,15 +641,14 @@ header {
 
   .housing-rental-cards a {
     width: 100%;
-}
+  }
 
-  
   /**** popular */
-.popular {
+  .popular {
     order: -1;
     margin-top: 30px;
     padding: 30px 20px;
-}
+  }
 
   .popular-cards {
     display: flex;
@@ -599,16 +661,39 @@ header {
     width: 100%;
   }
 
+  /******  activities section  ******/
+  .activities {
+    margin-bottom: 35px;
+  }
+  .activities-cards {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+
+  .activities-cards a {
+    width: 100%;
+  }
+
+  .activities-cards img {
+    height: 141px;
+  }
+
+  .position-img {
+    object-position: 0 20%;
+  }
 
 
+  /****** footer section ****/
+  .footer-container {
+    flex-direction: column;
+    padding: 30px;
+    gap: 50px;
+  }
+
+  .footer-canister {
+    padding: 0;
+    width: 100%;
+  }
+  
 
 }
-
-
-/* Il n'est pas possible de rajouter un breackpoint d'après les spécifications techniques du projet
-
-@media (max-width: 390px) {
-  .text-entry {
-    width: 78.5%;
-  } */
-
