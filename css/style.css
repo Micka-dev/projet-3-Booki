@@ -1,24 +1,24 @@
-/****** General ***********/
+/****** General ******/
 * {
   font-family: "Raleway", sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/*** design system ***/
+
+/****** design system ******/
 
 :root {
-  /* colors */
 
+  /**** colors ****/
   --main-color: #0065fc;
-  --main-bg-color: #F2F2F2;
+  --main-bg-color: #f2f2f2;
   --filter-hover-color: #deebff;
   --filter-color: #d9d9d9;
   --black: black;
   --white: white;
 
-  /* text configuration */
-
+  /**** text configuration ****/
   --header-font: "Raleway";
   --title-font: "Raleway";
   --tertiary-title-font: "Raleway";
@@ -89,6 +89,7 @@ h3 {
   min-width: 320px;
   box-sizing: border-box;
 }
+
 .canister {
   margin: 0 50px;
 }
@@ -117,7 +118,9 @@ a {
   color: var(--main-bg-color);
 }
 
-/**** Header *****/
+
+/**** Header ****/
+
 header {
   display: flex;
   flex-direction: row;
@@ -139,6 +142,7 @@ header {
   font-size: 1rem;
   line-height: 1.188rem;
 }
+
 .activities-header {
   margin-left: 68px;
   font-size: 1rem;
@@ -152,7 +156,9 @@ header {
   color: var(--main-color);
 }
 
-/* *** section research-information *** */
+
+/**** section research-information ****/
+
 .research-information {
   margin-bottom: 35px;
 }
@@ -170,8 +176,9 @@ header {
 .search-bar {
   margin-bottom: 35px;
   display: flex;
-  justify-content: flex-start; 
+  justify-content: flex-start;
 }
+
 form {
   display: flex;
   justify-content: flex-start;
@@ -275,7 +282,9 @@ form {
   margin-left: 10px;
 }
 
-/****** housing-rental And popular ***********/
+
+/**** housing-rental And popular ****/
+
 .housing-rental-and-popular {
   display: flex;
   justify-content: space-between;
@@ -287,7 +296,9 @@ form {
   box-sizing: border-box;
 }
 
-/****** housing-rental section ***********/
+
+/**** housing-rental section ****/
+
 .housing-rental {
   width: 65%;
   background-color: var(--main-bg-color);
@@ -308,13 +319,6 @@ form {
 .housing-rental-cards .card {
   height: 90%;
 }
-
-/* .housing-rental-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
-  gap: 30px;
-  margin-bottom: 30px;
-} */
 
 .housing-rental-cards img {
   width: 100%;
@@ -345,7 +349,9 @@ form {
   font-weight: 700;
 }
 
-/****** popular ***********/
+
+/**** popular ****/
+
 .popular {
   width: 32%;
   background-color: var(--main-bg-color);
@@ -361,6 +367,7 @@ form {
 .popular-cards .card {
   display: flex;
   margin-top: 33px;
+  /* height: 90%;   permet d'éviter la différence de hauteur de carte constatée entre tablette et mobile*/
 }
 
 .popular-cards img {
@@ -392,7 +399,9 @@ form {
   margin-bottom: 5px;
 }
 
-/****** activities section ******/
+
+/**** activities section ****/
+
 .activities {
   background-color: var(--white);
   padding: 30px;
@@ -428,11 +437,12 @@ form {
   padding: 20px 19px;
 }
 
-/******* footer section  ********/
+
+/**** footer section  ****/
+
 .footer-container {
   display: flex;
   background-color: var(--main-bg-color);
-
 }
 
 .footer-canister {
@@ -454,12 +464,19 @@ footer a {
   line-height: 1.188rem;
 }
 
-/* Le code ci-dessous correspond à la version responsive uniquement */
 
-/****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
+
+/*** Le code ci-dessous correspond à la version responsive uniquement ***/
+
+/********  Media queries  ********/
+
+
+/****** Medium devices (tablets, less/equal than 1024px) ******/
+
 @media (max-width: 1024px) {
+
   /**** research-information section ****/
+
   .filter-bar {
     flex-direction: column;
     align-items: flex-start;
@@ -479,20 +496,28 @@ footer a {
     row-gap: 20px;
   }
 
-  /*** housing-rental-and-popular section ****/
+
+  /**** housing-rental-and-popular section ****/
+
   .housing-rental-and-popular {
     flex-direction: column;
   }
+
+  
   /**** hebergement ****/
+
   .housing-rental {
     width: 100%;
   }
 
-  /* ******popular-section ******/
+
+  /**** popular-section ****/
+
   .popular {
     width: 100%;
     margin-top: 50px;
   }
+
   .popular-cards .card {
     display: flex;
     margin-top: 33px;
@@ -516,30 +541,29 @@ footer a {
     margin-bottom: 20px;
   }
 
-  /* Ils ont changé la police de la maquette => pourquoi? un peu simple de faire comme ça, non ? ;)
 
-  .popular-cards .card-title {
-    font-size: 14px;
-  }
+  /**** activities section  ****/
 
-  .popular-cards .card-subtitle {
-    font-size: 13px;
-  } */
-
-  /******  activities section  ******/
   .activities-cards img {
     height: 200px;
   }
 
-  /******* footer section *******/
+
+  /**** footer section ****/
+
   .footer-canister {
     column-gap: 30px;
   }
 }
 
-/************ Small devices (phones, less than 768px) **************/
-@media (max-width: 768px) {
-  /****** header ******/
+
+
+/****** Small devices (phones, less than 768px) ******/
+
+@media (max-width: 767.98px) {
+
+      /**** header ****/
+
   header {
     flex-direction: column;
   }
@@ -580,7 +604,9 @@ footer a {
     padding-bottom: 15px;
   }
 
-  /* *** section research-information *** */
+
+  /**** research-information section ****/
+
   .canister {
     margin: 0;
   }
@@ -621,7 +647,9 @@ footer a {
     width: 162.5px;
   }
 
-  /********* housing-rental-and-popular section **********/
+
+  /**** housing-rental-and-popular section ****/
+
   .housing-rental-and-popular {
     gap: 15px;
   }
@@ -629,7 +657,10 @@ footer a {
   .housing-rental-and-popular section {
     border-radius: 0;
   }
+
+
   /**** housing-rental section ****/
+
   .housing-rental {
     background-color: var(--white);
     padding: 20px 20px;
@@ -643,7 +674,9 @@ footer a {
     width: 100%;
   }
 
-  /**** popular */
+
+  /**** popular ****/
+
   .popular {
     order: -1;
     margin-top: 30px;
@@ -661,7 +694,9 @@ footer a {
     width: 100%;
   }
 
-  /******  activities section  ******/
+
+  /****  activities section  ****/
+
   .activities {
     margin-bottom: 35px;
   }
@@ -683,7 +718,8 @@ footer a {
   }
 
 
-  /****** footer section ****/
+  /**** footer section ****/
+
   .footer-container {
     flex-direction: column;
     padding: 30px;
@@ -694,6 +730,5 @@ footer a {
     padding: 0;
     width: 100%;
   }
-  
 
 }
