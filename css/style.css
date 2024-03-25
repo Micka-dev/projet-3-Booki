@@ -5,11 +5,9 @@
   padding: 0;
 }
 
-
 /****** design system ******/
 
 :root {
-
   /**** colors ****/
   --main-color: #0065fc;
   --main-bg-color: #f2f2f2;
@@ -118,7 +116,6 @@ a {
   color: var(--main-bg-color);
 }
 
-
 /**** Header ****/
 
 header {
@@ -156,7 +153,6 @@ header {
   color: var(--main-color);
 }
 
-
 /**** section research-information ****/
 
 .research-information {
@@ -176,7 +172,6 @@ header {
 .search-bar {
   margin-bottom: 35px;
   display: flex;
-  justify-content: flex-start;
 }
 
 form {
@@ -257,6 +252,10 @@ form {
   cursor: pointer;
 }
 
+.last-button {
+  margin-right: 0;
+}
+
 .filter-button .fa-solid {
   margin-right: 10px;
 }
@@ -282,7 +281,6 @@ form {
   margin-left: 10px;
 }
 
-
 /**** housing-rental And popular ****/
 
 .housing-rental-and-popular {
@@ -295,7 +293,6 @@ form {
   border-radius: 20px;
   box-sizing: border-box;
 }
-
 
 /**** housing-rental section ****/
 
@@ -312,6 +309,7 @@ form {
   margin-bottom: 30px;
   justify-content: space-between;
 }
+
 .housing-rental-cards a {
   width: 30%;
 }
@@ -349,7 +347,6 @@ form {
   font-weight: 700;
 }
 
-
 /**** popular ****/
 
 .popular {
@@ -367,7 +364,7 @@ form {
 .popular-cards .card {
   display: flex;
   margin-top: 33px;
-  /* height: 90%;   permet d'éviter la différence de hauteur de carte constatée entre tablette et mobile*/
+  /* height: 90%;   permetrait d'éviter la différence de hauteur de carte constatée entre tablette et mobile*/
 }
 
 .popular-cards img {
@@ -398,7 +395,6 @@ form {
 .popular-cards .card-rating {
   margin-bottom: 5px;
 }
-
 
 /**** activities section ****/
 
@@ -437,7 +433,6 @@ form {
   padding: 20px 19px;
 }
 
-
 /**** footer section  ****/
 
 .footer-container {
@@ -464,17 +459,13 @@ footer a {
   line-height: 1.188rem;
 }
 
-
-
 /*** Le code ci-dessous correspond à la version responsive uniquement ***/
 
 /********  Media queries  ********/
 
-
 /****** Medium devices (tablets, less/equal than 1024px) ******/
 
 @media (max-width: 1024px) {
-
   /**** research-information section ****/
 
   .filter-bar {
@@ -491,36 +482,23 @@ footer a {
     line-height: 1.188rem;
   }
 
-  .filter-button-bar {
-    flex-wrap: wrap;
-    row-gap: 20px;
-  }
-
-
   /**** housing-rental-and-popular section ****/
 
   .housing-rental-and-popular {
     flex-direction: column;
   }
 
-  
   /**** hebergement ****/
 
   .housing-rental {
     width: 100%;
   }
 
-
   /**** popular-section ****/
 
   .popular {
     width: 100%;
     margin-top: 50px;
-  }
-
-  .popular-cards .card {
-    display: flex;
-    margin-top: 33px;
   }
 
   .popular-cards {
@@ -541,13 +519,11 @@ footer a {
     margin-bottom: 20px;
   }
 
-
   /**** activities section  ****/
 
   .activities-cards img {
     height: 200px;
   }
-
 
   /**** footer section ****/
 
@@ -556,21 +532,17 @@ footer a {
   }
 }
 
-
-
 /****** Small devices (phones, less than 768px) ******/
 
 @media (max-width: 767.98px) {
-
-      /**** header ****/
+  /**** header ****/
 
   header {
     flex-direction: column;
   }
 
   .logo-container {
-    display: flex;
-    justify-content: center;
+    text-align: center;
   }
 
   .logo {
@@ -604,7 +576,6 @@ footer a {
     padding-bottom: 15px;
   }
 
-
   /**** research-information section ****/
 
   .canister {
@@ -612,7 +583,8 @@ footer a {
   }
 
   .research-information {
-    margin: 0 20px 35px 20px;
+    margin-bottom: 35px;
+    padding: 0 20px;
   }
 
   .text-entry {
@@ -640,13 +612,22 @@ footer a {
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   }
 
+  .filter-button-bar {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
   .filter-button {
     font-size: 0.875rem;
     line-height: 1rem;
     margin-right: 10px;
-    width: 162.5px;
+    width: 48%;
   }
 
+  .family-button,
+  .last-button {
+    margin-right: 0;
+  }
 
   /**** housing-rental-and-popular section ****/
 
@@ -658,13 +639,13 @@ footer a {
     border-radius: 0;
   }
 
-
   /**** housing-rental section ****/
 
   .housing-rental {
     background-color: var(--white);
     padding: 20px 20px;
   }
+
   .housing-rental-cards {
     flex-direction: column;
     gap: 15px;
@@ -673,7 +654,6 @@ footer a {
   .housing-rental-cards a {
     width: 100%;
   }
-
 
   /**** popular ****/
 
@@ -694,12 +674,12 @@ footer a {
     width: 100%;
   }
 
-
   /****  activities section  ****/
 
   .activities {
     margin-bottom: 35px;
   }
+
   .activities-cards {
     flex-direction: column;
     row-gap: 15px;
@@ -717,7 +697,6 @@ footer a {
     object-position: 0 20%;
   }
 
-
   /**** footer section ****/
 
   .footer-container {
@@ -730,5 +709,4 @@ footer a {
     padding: 0;
     width: 100%;
   }
-
 }
